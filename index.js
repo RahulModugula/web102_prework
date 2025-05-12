@@ -15,7 +15,7 @@ const gamesCard = document.getElementById("num-games");
 const unfundedBtn = document.getElementById("unfunded-btn");
 const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
-const descriptionContainer = document.getElementById("company-description");
+const descriptionContainer = document.getElementById("description-container"); // Fixed: was "company-description"
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
@@ -137,8 +137,18 @@ const sortedGames = [...GAMES_JSON].sort((a, b) => b.pledged - a.pledged);
 // Get top two games using destructuring
 const [topGame, secondGame] = sortedGames;
 
+// Clear existing content in the game containers before adding new content
+deleteChildElements(
+  firstGameContainer.querySelector("h3").nextElementSibling ||
+    firstGameContainer
+);
+deleteChildElements(
+  secondGameContainer.querySelector("h3").nextElementSibling ||
+    secondGameContainer
+);
+
 // Create elements for top game
-const topGameElement = document.createElement("p");
+const topGameElement = document.createElement("div");
 topGameElement.innerHTML = `
     <img class="game-img" src="${topGame.img}" alt="${topGame.name}" />
     <h4>${topGame.name}</h4>
@@ -147,7 +157,7 @@ topGameElement.innerHTML = `
 firstGameContainer.appendChild(topGameElement);
 
 // Create elements for runner up game
-const secondGameElement = document.createElement("p");
+const secondGameElement = document.createElement("div");
 secondGameElement.innerHTML = `
     <img class="game-img" src="${secondGame.img}" alt="${secondGame.name}" />
     <h4>${secondGame.name}</h4>

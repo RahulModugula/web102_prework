@@ -18,12 +18,24 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
+      Potential Future Improvements
+
+Search Functionality: Add a search bar to allow users to search for specific games by name or description
+Sorting Options: Implement additional sorting options (by backers, by goal amount, by percentage funded)
+Progress Bars: Add visual progress bars showing how close each game is to reaching its funding goal
+Game Categories: Add category filtering (RPG, Strategy, Card Games, etc.)
+Detailed Game Modal: Create popup modals with more detailed information when clicking on a game card
+Animations: Add smooth transitions when filtering games or hover effects
+Time Remaining: Add countdown timers showing how much time is left for funding campaigns
+Share Functionality: Add social media sharing buttons for individual games
+Funding Analytics: Create charts showing funding progress over time
+Mobile Navigation: Implement a hamburger menu for better mobile navigation
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src=https://imgur.com/a/p7ypOgF title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
@@ -36,4 +48,4 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+This project helped me practice JavaScript skills including array methods, template literals, destructuring, and DOM manipulation.
